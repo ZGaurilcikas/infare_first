@@ -1,0 +1,15 @@
+{
+  "name": "infare_first_task",
+  "version": "1.0.0",
+  "description": "Infare task",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"Hello Infare\")"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0"
+  }
+}
