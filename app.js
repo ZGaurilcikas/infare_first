@@ -67,7 +67,7 @@ for (var i = 1; i <= 28; i++) {
                         .text()
                         .slice(37);
 
-                    obj[i] = {
+                    obj = {
                         laikas: laikas,
                         Isvykimas: departure_airport[0],
                         Isvykimo_laikas: departure_time[0],
@@ -75,8 +75,8 @@ for (var i = 1; i <= 28; i++) {
                         Atvykimo_laikas: arrival_time[0],
                         Pigiausia_kaina: cheapest_price
                     };
-                   
-                   console.table(obj)
+                   objs.push(obj)
+                   console.table(objs)
                 });
             });
         }   
