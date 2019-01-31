@@ -1,1 +1,2 @@
 # infare
+open cmd
