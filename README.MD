@@ -7,7 +7,7 @@ Then open cmd and install npm
 then you have to install cheerio and request 
 
 
-			npm install request cheerio
+			npm install sync-request cheerio
 			
 
 then locate folder location via cmd and run app
