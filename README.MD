@@ -8,8 +8,9 @@ then you have to install cheerio and request
 
 
 			npm install request cheerio
+			
 
-then locate folder location and run app
+then locate folder location via cmd and run app
 
 			node app.js 
 
