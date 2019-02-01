@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
-    "request": "^2.88.0"
+    "netcat": "^1.4.0",
+    "request": "^2.88.0",
+    "sync-request": "^6.0.0",
+    "then-request": "^6.0.0"
   }
 }
