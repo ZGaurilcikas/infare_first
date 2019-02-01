@@ -18,7 +18,7 @@ for (var i = 1; i <= 28; i++) {
     var $ = cheerio.load(html);
 
     $('#ctl00_MainContent_ipcAvaDay_upnlResultOutbound').each((e, el) => {
-        //finding airport. .map() if is more than one flight in that day
+        //finding airport. .map() if is more than one flight in current day
         var x = $(el)
             .find('.evenrow.rowinfo2 td:first-child').map(function () {
                 return $(this).text();
@@ -74,19 +74,15 @@ for (var i = 1; i <= 28; i++) {
                 Isvykimo_laikas: departure_time[0],
                 Atvykimas: arrival_airport[0],
                 Atvykimo_laikas: arrival_time[0],
-                Pigiausia_kaina: cheapest_price
+                Pigiausia_kaina: cheapest_price + ' EUR'
             };
-            objs.push(obj)
+            if(departure_airport !== undefined && departure_time !== undefined && arrival_airport !== undefined){
+             objs.push(obj)
+            };
         });
     });
 }
 var cheap_price = objs.map(lol => lol.Pigiausia_kaina);
-
-cheap_price = cheap_price.filter(function (el) {
-    if (el != "") {
-        return el;
-    }
-});
 
 cheap_price = cheap_price.map(function (x) {
     return parseFloat(x.replace(/,/, '.'));
