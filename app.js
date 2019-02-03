@@ -4,7 +4,7 @@ var request = require('sync-request');
 var objs = [];
 
 
-for (var i = 1; i <= 28; i++) {
+for (var i = 3; i <= 28; i++) {
 
     //insert i in request for 28 days loop
 
@@ -96,7 +96,7 @@ for (var i = 1; i <= 28; i++) {
     });
 }
 // finding price array 
-var cheap_price = objs.map(lol => lol.Pigiausia_kaina);
+var cheap_price = objs.map(price_2 => price_2.Pigiausia_kaina);
 
 // change string to number and replace price with a '.'
 cheap_price = cheap_price.map(function (x) {
